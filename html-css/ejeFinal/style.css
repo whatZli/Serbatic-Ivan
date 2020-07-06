@@ -1,0 +1,112 @@
+.item1 {
+    grid-area: header;
+    text-align: center;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main right right' 'footer footer footer footer footer footer';
+}
+
+h1 {
+    color: #B72304;
+    font-size: 3em;
+    word-spacing: 1em;
+    letter-spacing: 0.3em;
+}
+
+fieldset {
+    border: darkblue 3px solid;
+    border-radius: 24px;
+}
+
+fieldset label {
+    font-weight: bold;
+    text-align: left;
+}
+
+legend {
+    text-align: left;
+    color: orange;
+    font-size: 20px;
+}
+
+fieldset:nth-of-type(1) input,
+fieldset:nth-of-type(3) input {
+    width: 150px;
+}
+
+fieldset:nth-of-type(1) label,
+fieldset:nth-of-type(3) label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+fieldset:nth-of-type(2) label,
+fieldset:nth-of-type(2) input,
+fieldset:nth-of-type(2) select {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+fieldset:nth-of-type(2) label:nth-last-child(2) {
+    margin-right: 35px;
+}
+
+#dia,
+#mes,
+#anyo {
+    width: 30px;
+}
+
+input[type=submit],
+input[type=reset] {
+    margin-left: 15px;
+    padding: 5px;
+}
+
+input:focus {
+    background-color: #FEF9E7;
+}
+
+input:hover {
+    border: 2px black solid;
+}
+
+.buttons {
+    text-align: center;
+}
+
+@media only screen and (max-width: 525px) {
+    fieldset label {
+        text-align: center;
+        display: block;
+        width: 100%;
+        ;
+    }
+    fieldset input,
+    fieldset select {
+        text-align: center;
+        display: inline-block;
+        width: 90%;
+        margin: 3px auto;
+        ;
+    }
+}
